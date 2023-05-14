@@ -29,30 +29,7 @@ const newObj = (user) => {
 
 /* Assignment-3 */
 
-const rollDice = (user1, user2, winDice = 3) => {
-    let rollA, rollB = 0;
-
-    while(rollA !== winDice || rollB !== winDice) {
-        
-        rollA = Math.round(((Math.random() * 5) + 1))
-        rollB = Math.round(((Math.random() * 5) + 1))
-        // if(rollA === winDice && rollB === winDice) {
-        //     continue;
-        // }
-    }
-
-    // if(rollA === 3) {
-    //     return `win ${user1}`
-    // } else {
-    //     return `win ${user2}`
-    // }
-    return `win ${rollA} ${rollB}  ${rollA === 3 ? user1 : user2}`
-}
-
-
-
-
-const rollingDice111 = (user1, user2) => {
+const rollDice = (user1, user2) => {
     let playerA = 0;
     let playerB = 0;
     let winner = "";
@@ -76,3 +53,5 @@ const rollingDice111 = (user1, user2) => {
 
     return `win  ${winner}`
 }
+
+rollDice("user1", "user2");

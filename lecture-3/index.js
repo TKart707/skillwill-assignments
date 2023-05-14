@@ -22,7 +22,13 @@ theSmallesUserName(users);
 /* Assignment-2 */
 
 const newObj = (user) => {
-    const newUser = {...user} 
+    const newUser = { ...user }; 
+    
+    for (let prop in user) {
+      if (user[prop] && typeof user[prop] === 'object' && !Array.isArray(user[prop])) {
+        newUser[prop] = { ...user[prop] };
+      }
+    }
     return newUser;
 }
 

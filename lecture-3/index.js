@@ -21,15 +21,23 @@ theSmallesUserName(users);
 
 /* Assignment-2 */
 
-const newObj = (user) => {
-    const newUser = { ...user }; 
-    
-    for (let prop in user) {
-      if (user[prop] && typeof user[prop] === 'object' && !Array.isArray(user[prop])) {
-        newUser[prop] = { ...user[prop] };
-      }
+const getCopyObject = (object) => {
+    let newObject = {};
+
+    for(const prop in object) {
+        if(typeof object[prop] === 'object') {
+            // non-primitive
+            if(Array.isArray(object[prop])) {
+                newObject[prop] = object[prop].map((el) => getCopyObject(el))
+            } else {
+                newObject[prop] = getCopyObject(object[prop])
+            }
+        } else {
+            // primitive
+            newObject = {...object}
+        }
     }
-    return newUser;
+    return newObject;
 }
 
 

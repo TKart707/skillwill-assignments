@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+/* Assignment - 1*/
+#modal {
+    display: none;
+    z-index: 10;
+    background-color: black;
+    opacity: 0.2;
+    width: 500px;
+    height: 200px;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+}
+
+
+/* Assignment - 2 */
+.ass-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    margin-top: 20px;
+    width: fit-content;
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 20px;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.5
+    }
+}
+
+/* Assignment - 3 */
+#answer {
+    margin: 10px 0;;
+}

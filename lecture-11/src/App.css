@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  padding: 20px;
+}
+
+.booklist {
+  display: flex;
+  gap: 10px;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+
+  border: 2px solid salmon;
+}
+
+.btn {
+
+  padding: 10px 15px;
+  background-color: purple;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

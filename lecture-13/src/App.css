@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.app {
+    max-width: 1200px;
+    margin: 100px auto 0 auto;
+    padding: 30px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "input input"
+        "incomplete complete";
+
+    @media (max-width: 500px) {
+        grid-template-areas:
+            "input"
+            "incomplete"
+            "complete"
+        ;
+    }
+}
+
+/* Input styles */
+.input {
+    grid-area: input;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input input {
+    all: unset;
+    height: 40px;
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 2px rgb(155, 114, 250) solid;
+}
+
+/* Tasks container styles */
+.tasks-container {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.incomplete {
+    grid-area: incomplete;
+    border: 1px rgb(168, 30, 15) solid;
+}
+
+.complete {
+    grid-area: complete;
+    border: 1px seagreen solid;
+}
+
+.title {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+/* Buttons styles */
+.btn {
+    background: blueviolet;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.incomplete button {
+    background: rgb(201, 44, 44);
+}
+
+.complete button {
+    background: rgb(14, 151, 14);
+}
+
+.remove {
+    margin-right: 5px;
+}
+
+/* task styles */
+.task-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    border: 1px silver solid;
+    border-radius: 10px;
+    padding: 5px;
+}
